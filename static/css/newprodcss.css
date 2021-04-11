@@ -1,0 +1,85 @@
+          .testbox{
+  font-family: Verdana, Helvetica, sans-serif; 
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  width:100%;
+  min-height: 350px;
+}
+
+      
+h1 {
+    color: royalblue;
+      margin: 15px 0;
+      font-weight: 400;
+      }
+
+h4 {
+    color:white; 
+      margin-bottom: 4px;
+      }
+      
+.testbox { 
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 3px;
+      }
+      
+
+      
+input, textarea , #cal{
+      width: 20em;
+      margin-bottom: 10px;
+      border: 1px solid #4db5ef;
+      border-radius: 3px;
+      }
+      
+
+      
+input:hover, textarea:hover {
+      outline: none;
+      border: 1px solid #095484;
+     
+      }
+        
+      
+.item { 
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin: 10px 0;
+      }
+           
+
+input {
+      width: 300px;
+      margin: 0 0 0 8px;
+    color: black
+      }
+
+.item {
+      flex-direction: row;
+      align-items: center;
+      }
+      
+.item p {
+      width: 30%;
+      }
+      
+.item i {
+      left: 61%;
+      top: 25%;
+      }
+      
+          cat, .cat_css{
+               width: 300px;
+      margin: 0 0 0 8px;
+    color: black;
+        width: 20em;
+      margin-bottom: 10px;
+      border: 1px solid #4db5ef;
+      border-radius: 3px;
+          }

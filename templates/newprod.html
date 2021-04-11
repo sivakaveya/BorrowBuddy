@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>New Product Details</title>
+  <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link href="{{url_for('static', filename= 'css/bootstrap.min.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css">
+
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename= 'css/home_pg_styling.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{url_for('static', filename= 'css/newprodcss.css') }}">
+
+</head>
+
+
+<body>
+  <div class="container-fluid">
+    <div id="header">
+      <div id="pghead">
+        BorrowBuddy
+      </div>
+      <div id="searchbox">
+        <form method="get">
+          <input id="search" type="text">
+          <input id="submit" type="submit" value="Search">
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- create nv bar-->
+  <nav role="navigation" class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle" data-target="#navbarCollapse" data-toggle="collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse" id="navbarCollapse">
+        <ul class="nav navbar-nav">
+          <li><a href="/home">Home</a></li>
+          <li><a href="/new_product">Add Product</a></li>
+          <li><a href="/request">Requests</a></li>
+          <li><a href="#">About Me</a></li>
+          <li><a href="#">Responsibility Pt: <span></span>Bonus Pt:</a></li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="testbox">
+    <form action="/new_product" method="POST" enctype="multipart/form-data">
+      <h1>New Equipment Details</h1>
+      <hr />
+
+      <div class="item">
+        <p>Equipment Title</p>
+        <input type="text" name="title">
+      </div>
+
+      <div class="item">
+        <p>Select Category</p>
+        <select class="cat_css" placeholder="Product Category" name="category" id="category" required>
+          <option disabled hidden selected>Product Category</option>
+          <option value="Carpentary">Carpentary</option>
+          <option value="Electrical">Electrical</option>
+          <option value="Utensils">Utensils</option>
+          <option value="Books">Books</option>
+          <option value="Games">Games and Entertainment</option>
+          <option value="Stationery">Stationery</option>
+          <option value="Hardware">Hardware</option>
+          <option value="Home">Home Applications</option>
+        </select>
+
+      </div>
+
+
+      <div class="item">
+        <label for="inputFile">Equipment Photo</label>
+        <input type="file" name="img">
+      </div>
+
+
+      <small>Upload a snap of your equipment!</small>
+      <div>
+        <button type="submit" id="btn" class="btn btn-info" name="submit" value="submit">Upload Equipment</button>
+      </div>
+    </form>
+  </div>
+
+
+
+  <script>
+    $(function () {
+      $("#btn").click(function () {
+        window.alert("Are you sure you want to proceed?")
+        window.alert("The equipment is uploaded successfully. You may now receive borrow requests for this equipment")
+      });
+    });
+
+
+  </script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
